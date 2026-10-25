@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rav — Smart Capsule untuk Windows</title>
+<meta name="description" content="Rav adalah smart capsule untuk Windows: musik & lirik, Pomodoro, to-do, cuaca, clipboard, shelf file, launcher, dan animasi karakter lucu di tepi layar.">
+<meta name="theme-color" content="#07060f">
+<meta property="og:title" content="Rav — Smart Capsule untuk Windows">
+<meta property="og:description" content="Semua fitur dalam satu capsule di tepi layar Windows.">
+<meta property="og:image" content="assets/icon.png">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top"><img src="assets/icon.png" alt="" width="34" height="34"><span>Rav</span></a>
+  <nav class="links">
+    <a href="#fitur">Fitur</a>
+    <a href="#animasi">Animasi</a>
+    <a href="#panduan">Panduan</a>
+    <a href="#karakter">Karakter</a>
+    <a href="#personalisasi">Personalisasi</a>
+    <a href="#video">Video</a>
+    <a href="#coba">Coba</a>
+    <button type="button" class="nav-fb" data-open-fb>Kritik &amp; saran</button><a href="#unduh">Unduh</a>
+  </nav>
+  <a class="btn btn-sm" href="#unduh">Unduh</a>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="aurora"><i></i><i></i><i></i></div>
+  <div class="hero-inner">
+    <div class="pill-tag reveal">Untuk Windows 10 &amp; 11 · 64-bit</div>
+    <h1 class="reveal">Notch kecil.<br><span class="grad">Semua yang kamu butuhkan.</span></h1>
+    <p class="lead reveal">Rav adalah smart capsule yang duduk manis di tepi layar. Musik dan lirik, fokus Pomodoro, to-do, cuaca, clipboard, sampai karakter kucing mochi yang suka bergerak sendiri.</p>
+    <div class="cta reveal">
+      <a class="btn btn-lg" href="#unduh" data-download>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Unduh untuk Windows
+      </a>
+      <a class="btn btn-ghost btn-lg" href="#video">Tonton video</a>
+    </div>
+    <p class="fine reveal">Gratis · Versi 3.0.0 · Installer &amp; versi portable</p>
+    <div class="dl-count reveal" id="heroCount"><span class="dc-num" data-dc>—</span><span class="dc-txt">orang sudah mengunduh Rav</span></div>
+    <a class="btn btn-ghost btn-sm donate-hero" href="https://saweria.co/brlhbsy" target="_blank" rel="noopener">☕ Donasi lewat Saweria</a>
+  </div>
+
+  <div class="hero-stage reveal" aria-hidden="true">
+    <div class="desk">
+      <div class="desk-glow"></div>
+      <div class="capsule" id="heroCap">
+        <div class="cap-panel on" data-i="0">
+          <div class="cp-head"><span class="emo">🎵</span> Music</div>
+          <div class="cp-row"><div class="cp-art"></div><div><b>Senja di Kota</b><small>Rindu Sore</small></div>
+            <div class="eq"><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="cp-bar"><i></i></div>
+        </div>
+        <div class="cap-panel" data-i="1">
+          <div class="cp-head"><span class="emo">🍅</span> Pomodoro</div>
+          <div class="cp-time">24:12</div>
+          <div class="cp-sub">Fokus · sesi 2 dari 4</div>
+        </div>
+        <div class="cap-panel" data-i="2">
+          <div class="cp-head"><span class="emo">✅</span> To-do list<small>2/4</small></div>
+          <div class="cp-list"><span class="ck">✓</span> Kirim laporan<br><span class="ck">✓</span> Balas email<br><span class="cb"></span> Review desain</div>
+        </div>
+        <div class="cap-panel" data-i="3">
+          <div class="cp-head"><span class="emo">⛅</span> Weather</div>
+          <div class="cp-time sm">31°</div>
+          <div class="cp-sub">Cerah berawan</div>
+        </div>
+        <div class="cap-panel" data-i="4">
+          <div class="cp-head"><span class="emo">🎮</span> Game</div>
+          <div class="cp-tiles"><span style="background:linear-gradient(135deg,#1e3a8a,#0ea5e9)"></span><span style="background:linear-gradient(135deg,#7c2d12,#f97316)"></span><span style="background:linear-gradient(135deg,#4c1d95,#c084fc)"></span></div>
+        </div>
+      </div>
+      <div class="cap-dots" id="capDots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<section class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>🎵 Musik</span><span>🎤 Lirik sinkron</span><span>🍅 Pomodoro</span><span>✅ To-do</span><span>⛅ Cuaca</span><span>📋 Clipboard</span><span>📥 Shelf file</span><span>🚀 Launcher</span><span>🎮 Mode game</span><span>💧 Pengingat minum</span><span>📈 System</span><span>🐱 Karakter lucu</span>
+    <span>🎵 Musik</span><span>🎤 Lirik sinkron</span><span>🍅 Pomodoro</span><span>✅ To-do</span><span>⛅ Cuaca</span><span>📋 Clipboard</span><span>📥 Shelf file</span><span>🚀 Launcher</span><span>🎮 Mode game</span><span>💧 Pengingat minum</span><span>📈 System</span><span>🐱 Karakter lucu</span>
+  </div>
+</section>
+
+<!-- ================= VIDEO ================= -->
+<section class="section" id="video">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Lihat sekilas</p>
+    <h2>Rav dalam 31 detik</h2>
+    <p>Video promo resmi yang menampilkan hampir semua fitur Rav.</p>
+  </div>
+  <div class="video-wrap reveal">
+    <video controls playsinline preload="metadata" poster="assets/icon.png" src="assets/Rav-promo.mp4"></video>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="section" id="fitur">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Fitur lengkap</p>
+    <h2>18 menu dalam satu capsule</h2>
+    <p>Geser menu dengan panah atau klik judul capsule untuk memilih menu. Ini penjelasan setiap menu, satu per satu.</p>
+  </div>
+
+  <div class="feat-grid">
+    <article class="feat reveal">
+      <div class="feat-ico">🎵</div>
+      <h3>Music</h3>
+      <p>Lihat lagu yang sedang diputar: judul, artis, cover, dan progres. Kontrol putar, jeda, lagu sebelumnya, dan lagu berikutnya langsung dari capsule.</p>
+      <ul><li>Mendukung kontrol media Windows</li><li>Equalizer ikut bergerak saat musik jalan</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">🗓️</div>
+      <h3>Ringkasan</h3>
+      <p>Muncul otomatis saat tidak ada musik. Berisi tanggal hari ini, progres to-do, jumlah minum air, dan sisa waktu fokus.</p>
+      <ul><li>Berganti dengan menu Music saat ada lagu</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">🎤</div>
+      <h3>Lyrics</h3>
+      <p>Lirik lagu tampil baris demi baris, sinkron dengan lagu yang sedang diputar. Lirik diambil otomatis dari internet.</p>
+      <ul><li>Mode karaoke: baris yang sedang dinyanyikan menyala</li><li>Butuh koneksi internet</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">⛅</div>
+      <h3>Weather</h3>
+      <p>Kondisi cuaca lengkap dengan ikon animasi: cerah, berawan, hujan, berkabut, dan malam bertabur bintang. Suhu bisa ditampilkan dalam °C atau °F.</p>
+      <ul><li>Kota otomatis berdasarkan lokasi IP</li><li>Atau tulis nama kota sendiri di Personalisasi</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">🍅</div>
+      <h3>Pomodoro</h3>
+      <p>Teknik fokus 25 menit. Saat sesi selesai, Rav berganti ke mode istirahat, membunyikan alarm, dan memunculkan capsule supaya kamu tidak terlewat.</p>
+      <ul><li>Mode fokus dan istirahat bergantian</li><li>Berjalan terus walau capsule sedang tertutup</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">⏳</div>
+      <h3>Timer</h3>
+      <p>Timer hitung mundur dengan pilihan cepat 1, 5, 10, 15, dan 30 menit. Bisa tambah 1 menit kapan saja, atau reset.</p>
+      <ul><li>Cincin progres menunjukkan sisa waktu</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">💧</div>
+      <h3>Water Reminder</h3>
+      <p>Pengingat minum dengan target harian 1,5 liter. Tambah jumlah minum dengan satu klik dan lihat progres terisi sampai target.</p>
+      <ul><li>Target bisa dilihat langsung di capsule</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">✅</div>
+      <h3>To-do list</h3>
+      <p>Catat tugas harian tanpa membuka aplikasi lain. Ketik tugas lalu tekan Enter, centang saat selesai, dan lihat hitungan x/y.</p>
+      <ul><li>Maksimal 60 karakter per tugas</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">📝</div>
+      <h3>Notes</h3>
+      <p>Catatan cepat yang tersimpan otomatis saat kamu mengetik. Cocok untuk ide, nomor, atau pengingat singkat.</p>
+      <ul><li>Batas 800 karakter</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">📅</div>
+      <h3>Calendar</h3>
+      <p>Lihat hari, tanggal, dan deretan minggu ini sekilas. Berguna untuk mengecek jadwal tanpa membuka kalender penuh.</p>
+      <ul><li>Ringkas, cukup untuk cek jadwal sekilas</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">🌍</div>
+      <h3>World Clock</h3>
+      <p>Pantau jam di beberapa zona waktu sekaligus. Berguna untuk tim yang bekerja lintas kota atau lintas negara.</p>
+      <ul><li>Tampil langsung di dalam capsule</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">⏱️</div>
+      <h3>Stopwatch</h3>
+      <p>Stopwatch dengan presisi sampai per seratus detik. Tekan Start, Lap untuk mencatat putaran, lalu Reset.</p>
+      <ul><li>Daftar lap tersimpan selama sesi berjalan</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">📈</div>
+      <h3>System</h3>
+      <p>Pantau pemakaian CPU, RAM, dan disk C: secara real-time. Cek kondisi komputer tanpa membuka Task Manager.</p>
+      <ul><li>Pembaruan otomatis setiap detik</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">📋</div>
+      <h3>Clipboard</h3>
+      <p>Riwayat salinan terakhir kamu. Klik salah satu untuk menyalinnya lagi. Saat kamu tekan Ctrl+C atau Ctrl+V, capsule ikut memberi animasi kecil.</p>
+      <ul><li>Riwayat dicatat otomatis selama Rav berjalan</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">🚀</div>
+      <h3>Launcher</h3>
+      <p>Buka aplikasi yang sering dipakai dengan satu klik: Kalkulator, Notepad, File, Task Manager, Setelan, Screenshot, Terminal, dan Browser.</p>
+      <ul><li>Delapan jalan pintas siap pakai</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">🎮</div>
+      <h3>Game</h3>
+      <p>Daftar game dari Steam dan Epic yang sudah terpasang, dibaca otomatis dari folder instalasi. Klik kotaknya untuk langsung bermain.</p>
+      <ul><li>Capsule otomatis hilang saat main game</li><li>Pengingat istirahat setelah lama bermain</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">📥</div>
+      <h3>Shelf</h3>
+      <p>Rak file sementara. Seret file ke capsule untuk menyimpannya di sana, lalu seret keluar kapan saja. Klik file untuk membukanya.</p>
+      <ul><li>Ikon file tampil sesuai jenis file</li></ul>
+    </article>
+
+    <article class="feat reveal">
+      <div class="feat-ico">⏻</div>
+      <h3>Power</h3>
+      <p>Kontrol daya dari capsule: Kunci layar, Tidur, Restart, atau Matikan. Setiap tombol menampilkan status singkat saat aksinya berjalan.</p>
+      <ul><li>Empat aksi: Lock, Sleep, Restart, Shut down</li></ul>
+    </article>
+  </div>
+
+  <!-- spotlight -->
+  <div class="spot-wrap">
+    <div class="spot reveal">
+      <div class="spot-text">
+        <p class="eyebrow">Spotlight · Mode game</p>
+        <h3>Capsule tahu kapan harus diam</h3>
+        <p>Saat kamu bermain game atau aplikasi layar penuh, capsule otomatis menghilang supaya tidak mengganggu. Setelah selesai, capsule muncul lagi. Kalau sudah terlalu lama bermain, Rav mengingatkanmu untuk istirahat dengan animasi "Istirahat dulu". Durasi pengingat bisa kamu atur dari 30 menit sampai 2 jam.</p>
+        <ul class="checks"><li>Sembunyikan capsule saat main game</li><li>Pengingat istirahat: 30 menit, 45 menit, 1 jam, 1,5 jam, atau 2 jam</li></ul>
+      </div>
+      <div class="spot-visual">
+        <div class="mini-cap"><span class="emo">💤</span> Istirahat dulu, sudah 60 menit main</div>
+      </div>
+    </div>
+    <div class="spot spot-rev reveal">
+      <div class="spot-text">
+        <p class="eyebrow">Spotlight · Shelf</p>
+        <h3>Seret, simpan, lepas nanti</h3>
+        <p>Shelf adalah tempat singgah untuk file. Seret dokumen atau gambar ke capsule saat kamu sedang butuh ruang, lalu seret lagi ke tempat tujuan ketika sudah siap. Tidak perlu membuka folder bolak-balik.</p>
+        <ul class="checks"><li>Drag &amp; drop dari dan ke capsule</li><li>Klik untuk membuka file</li></ul>
+      </div>
+      <div class="spot-visual">
+        <div class="shelf-demo"><div class="sd-file">📄 proposal.pdf</div><div class="sd-hint">Seret file ke sini</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ANIMASI ================= -->
+<section class="section" id="animasi">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Animasi</p>
+    <h2>Capsule yang hidup</h2>
+    <p>Setiap kejadian di komputer punya reaksinya sendiri. Semua animasi ini bisa dinyalakan atau dimatikan satu per satu di Personalisasi.</p>
+  </div>
+  <div class="anim-grid">
+    <div class="anim reveal"><div class="anim-ico">🎵</div><div><h4>Musik</h4><p>Joget, lirik karaoke, equalizer, dan vinyl ikut berputar saat lagu berjalan.</p></div></div>
+    <div class="anim reveal"><div class="anim-ico">🔊</div><div><h4>Volume</h4><p>Animasi naik, turun, dan mute setiap kali volume diubah.</p></div></div>
+    <div class="anim reveal"><div class="anim-ico">⬇️</div><div><h4>Download</h4><p>Animasi saat file sedang diunduh, lalu ledakan kecil saat unduhan berhasil.</p></div></div>
+    <div class="anim reveal"><div class="anim-ico">📋</div><div><h4>Copy &amp; Paste</h4><p>Ctrl+C dan Ctrl+V memberi respons visual singkat di capsule.</p></div></div>
+    <div class="anim reveal"><div class="anim-ico">🔌</div><div><h4>Baterai &amp; charger</h4><p>Animasi saat charger dicolok atau dicabut. Baterai hampir habis (15%) berkedip merah.</p></div></div>
+    <div class="anim reveal"><div class="anim-ico">🐾</div><div><h4>Animasi acak karakter</h4><p>Karakter melompat, goyang, berputar, tidur, jatuh cinta, atau kaget. Frekuensinya bisa jarang, normal, atau sering.</p></div></div>
+  </div>
+</section>
+
+<!-- ================= KARAKTER ================= -->
+<section class="section" id="karakter">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Karakter</p>
+    <h2>7 teman kecil di capsule</h2>
+    <p>Pilih karakter favoritmu. Karakter bisa diganti kapan saja dan langsung berubah di layar.</p>
+  </div>
+  <div class="char-grid">
+    <div class="char reveal main"><div class="char-art"><svg viewBox="0 0 120 110" aria-hidden="true"><defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a62"/><stop offset="1" stop-color="#ff6fae"/></linearGradient></defs><path d="M20 50 L24 14 L44 30 Q60 26 76 30 L96 14 L100 50 Q106 92 60 96 Q14 92 20 50Z" fill="#0c0a18" stroke="url(#cg)" stroke-width="3.6" stroke-linejoin="round"/><ellipse cx="30" cy="72" rx="6" ry="3.4" fill="#ff6fae" opacity=".5"/><ellipse cx="90" cy="72" rx="6" ry="3.4" fill="#ff6fae" opacity=".5"/><ellipse cx="44" cy="58" rx="7" ry="8.5" fill="#fff"/><ellipse cx="76" cy="58" rx="7" ry="8.5" fill="#fff"/><circle cx="45.5" cy="59.5" r="3.6" fill="#0c0a18"/><circle cx="77.5" cy="59.5" r="3.6" fill="#0c0a18"/><path d="M53 74q3.5 4 7 0q3.5 4 7 0" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div><h3>Mochi Kitty</h3><p>Kucing mochi manis. Karakter utama Rav.</p><span class="tag">Utama</span></div>
+    <div class="char reveal"><div class="char-art c-ghost"><span>👻</span></div><h3>Boo Ghost</h3><p>Hantu mungil yang melayang.</p></div>
+    <div class="char reveal"><div class="char-art c-bunny"><span>🐰</span></div><h3>Pochi Bunny</h3><p>Kelinci putih bertelinga panjang.</p></div>
+    <div class="char reveal"><div class="char-art c-alien"><span>👽</span></div><h3>Zibo Alien</h3><p>Alien hijau dari galaksi lucu.</p></div>
+    <div class="char reveal"><div class="char-art c-slime"><span>🫧</span></div><h3>Jelly Slime</h3><p>Slime biru yang kenyal dan imut.</p></div>
+    <div class="char reveal"><div class="char-art c-robot"><span>🤖</span></div><h3>Bolt Robot</h3><p>Robot mungil dengan mata LED.</p></div>
+    <div class="char reveal"><div class="char-art c-bear"><span>🧸</span></div><h3>Bruni Bear</h3><p>Beruang cokelat yang hangat.</p></div>
+  </div>
+</section>
+
+<!-- ================= PERSONALISASI ================= -->
+<section class="section" id="personalisasi">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Personalisasi</p>
+    <h2>Atur sesuai seleramu</h2>
+    <p>Halaman Personalisasi terpisah dari capsule. Semua perubahan langsung terlihat di layar.</p>
+  </div>
+  <div class="pers-grid">
+    <div class="pers reveal">
+      <h3>Bentuk capsule</h3>
+      <div class="shape-row">
+        <div class="shape sel"><div class="s-notch"></div><span>Notch</span></div>
+        <div class="shape"><div class="s-pill"></div><span>Pil</span></div>
+      </div>
+      <p>Pilih bentuk Notch yang menempel di atas layar, atau Pil yang melayang sedikit di bawah. Warna capsule bisa dipilih: Hitam, Warna karakter, atau Garis neon.</p>
+    </div>
+    <div class="pers reveal">
+      <h3>Ambient light</h3>
+      <div class="amb-demo"><i></i><i></i></div>
+      <p>Cahaya lembut di sekitar capsule yang mengikuti karakter, musik, dan notifikasi. Intensitasnya bisa diatur, dan bisa ikut bereaksi terhadap animasi.</p>
+    </div>
+    <div class="pers reveal">
+      <h3>Tampilan capsule</h3>
+      <ul class="toggles">
+        <li><span>Jam</span><i class="tg on"></i></li>
+        <li><span>Format 24 jam</span><i class="tg on"></i></li>
+        <li><span>Baterai</span><i class="tg on"></i></li>
+        <li><span>Cuaca</span><i class="tg on"></i></li>
+      </ul>
+      <p>Tampilkan atau sembunyikan jam, baterai, dan cuaca. Pilih format 24 jam atau AM/PM.</p>
+    </div>
+    <div class="pers reveal">
+      <h3>Ritme animasi</h3>
+      <ul class="toggles">
+        <li><span>Animasi acak</span><i class="tg on"></i></li>
+        <li><span>Frekuensi</span><em>Normal</em></li>
+        <li><span>Sembunyi saat game</span><i class="tg on"></i></li>
+      </ul>
+      <p>Atur seberapa sering karakter bergerak sendiri, dan animasi mana saja yang ingin ditampilkan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COBA LANGSUNG ================= -->
+<section class="section" id="coba">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Coba langsung</p>
+    <h2>Lihat Rav sebelum kamu unduh</h2>
+    <p>Di bawah ini bukan gambar. Yang berjalan adalah <b>kode tampilan asli Rav</b> (folder <code>app/</code>), sama persis dengan yang ada di aplikasi. Hanya data yang disimulasikan, karena browser tidak bisa membaca musik, cuaca, dan sistem di Windows kamu.</p>
+  </div>
+
+  <div class="demo-stage reveal" id="ravStage">
+    <div class="desk-mock">
+      <div class="desk-top"><span></span><span></span><span></span></div>
+      <iframe id="ravCap" class="cap-frame" src="app/index.html" title="Capsule Rav (asli)" scrolling="no" allowtransparency="true" loading="lazy"></iframe>
+      <div class="desk-hint">Klik judul menu di capsule untuk melihat semua menu · ‹ › untuk pindah</div>
+    </div>
+    <div class="demo-ctrl">
+      <button class="chip-btn" id="btnOpen">Buka capsule</button>
+      <button class="chip-btn" id="btnClose">Tutup</button>
+      <button class="chip-btn" id="btnPlay">Putar lagu contoh</button>
+      <button class="chip-btn" id="btnStop">Hentikan lagu</button>
+      <button class="chip-btn" id="btnBattery">Baterai 15%</button>
+    </div>
+    <div class="toast-demo" id="ravToast"></div>
+  </div>
+
+  <div class="set-head reveal">
+    <h3>Personalisasi (asli)</h3>
+    <p>Ubah karakter, bentuk, warna, dan animasi. Perubahannya langsung terlihat di capsule di atas. Tombol "Coba animasi" di bagian bawah juga berfungsi.</p>
+  </div>
+  <div class="set-box reveal" id="ravSetBox">
+    <iframe id="ravSet" class="set-frame" src="app/settings.html" title="Personalisasi Rav (asli)" scrolling="yes" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- ================= SEBELUM DOWNLOAD ================= -->
+<section class="section" id="sebelum">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Sebelum unduh</p>
+    <h2>Yang akan kamu dapatkan</h2>
+    <p>Supaya tidak ada kejutan, ini yang sebenarnya dilakukan Rav, termasuk batasannya.</p>
+  </div>
+  <div class="before-grid">
+    <div class="before reveal">
+      <h4><span class="emo">✅</span> Yang sudah termasuk</h4>
+      <ul>
+        <li>18 menu: Music, Ringkasan, Lyrics, Weather, Pomodoro, Timer, Water Reminder, To-do, Notes, Calendar, World Clock, Stopwatch, System, Clipboard, Launcher, Game, Shelf, Power</li>
+        <li>7 karakter dan 2 bentuk capsule (Notch dan Pil)</li>
+        <li>3 gaya warna: Hitam, Warna karakter, Garis neon</li>
+        <li>Ambient light dan animasi musik, download, copy &amp; paste, baterai, serta karakter acak</li>
+        <li>Mode game dan pengingat istirahat</li>
+      </ul>
+    </div>
+    <div class="before reveal">
+      <h4><span class="emo">📌</span> Yang perlu kamu tahu</h4>
+      <ul>
+        <li>Butuh <b>Windows 10 atau 11, 64-bit</b></li>
+        <li>Cuaca dan lirik lagu membutuhkan internet. Fitur lain tetap jalan offline</li>
+        <li>Mode game bekerja untuk game borderless atau windowed fullscreen. Game exclusive fullscreen mungkin tetap menutupi capsule</li>
+        <li>Menu Volume tidak ada di capsule. Animasi volume tetap ada saat volume berubah</li>
+        <li>Windows SmartScreen bisa menampilkan peringatan "unknown publisher" karena belum di-code-sign</li>
+      </ul>
+    </div>
+    <div class="before reveal">
+      <h4><span class="emo">⚙️</span> Yang bisa kamu atur</h4>
+      <ul>
+        <li>Jalan otomatis saat Windows start, dari menu klik kanan ikon tray</li>
+        <li>Personalisasi dari menu yang sama, atau lewat bagian "Coba langsung" di atas</li>
+        <li>Cuaca bisa memakai kota otomatis atau nama kota sendiri, dengan satuan °C atau °F</li>
+        <li>Animasi bisa dinyalakan atau dimatikan satu per satu</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= UNDUH ================= -->
+<section class="section download" id="unduh">
+  <div class="dl-card reveal">
+    <div class="dl-glow"></div>
+    <img src="assets/icon.png" alt="Ikon Rav" class="dl-icon" width="96" height="96">
+    <h2>Siap pakai di Windows</h2>
+    <p class="dl-sub">Versi <strong>3.0.0</strong> · Windows 10 / 11 (64-bit)</p>
+    <div class="cta">
+      <a class="btn btn-lg" href="#" data-download id="dlMain">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Unduh installer (.exe)
+      </a>
+      <a class="btn btn-ghost btn-lg" href="#" data-download-portable id="dlPortable">Versi portable</a>
+    </div>
+    <div class="dl-meta"><span>Installer: <b>Rav-Setup-3.0.0.exe</b> · ±82 MB</span><span>Portable: <b>Rav-3.0.0-portable.exe</b> · ±82 MB</span><span>Butuh: <b>Windows 10 / 11 64-bit</b></span></div>
+    <div class="dl-count" id="dlCount"><span class="dc-num" id="dcNum" data-dc>—</span><span class="dc-txt">orang sudah mengunduh Rav</span></div>
+    <p class="fine" id="osNote"></p>
+  </div>
+
+  <div class="steps">
+    <div class="step reveal"><b>1</b><h4>Unduh</h4><p>Pakai installer untuk pemasangan biasa. Pilih portable kalau tidak ingin memasang.</p></div>
+    <div class="step reveal"><b>2</b><h4>Pasang</h4><p>Jalankan file, pilih folder instalasi, lalu Rav akan membuat shortcut di Desktop dan Start Menu.</p></div>
+    <div class="step reveal"><b>3</b><h4>Nikmati</h4><p>Capsule muncul di atas layar. Klik kanan ikon tray untuk membuka menu dan Personalisasi.</p></div>
+  </div>
+
+  <div class="note reveal">
+    <h4>Catatan SmartScreen</h4>
+    <p>Windows mungkin menampilkan peringatan "unknown publisher" karena aplikasi belum memakai sertifikat code signing. Pilih <em>More info</em> lalu <em>Run anyway</em>. Aplikasinya aman dijalankan.</p>
+  </div>
+
+  <div class="uninstall reveal">
+    <p>Bisa dihapus kapan saja lewat <em>Settings → Apps</em>.</p>
+  </div>
+</section>
+
+<!-- ================= DONASI ================= -->
+<section class="section donate" id="donasi">
+  <div class="donate-card reveal">
+    <div class="dl-glow"></div>
+    <p class="eyebrow">Dukung Rav</p>
+    <h2>Suka pakai Rav?</h2>
+    <p>Rav gratis dan akan terus dikembangkan. Kalau kamu merasa terbantu, dukungan kecil dari kamu sangat berarti untuk terus membuat Rav lebih baik.</p>
+    <a class="btn btn-lg" href="https://saweria.co/brlhbsy" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 4.5 6.9 4.5c2 0 3.5 1.1 5.1 3 1.6-1.9 3.1-3 5.1-3 4 0 6 4.1 4.5 7.4C19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+      Donasi lewat Saweria
+    </a>
+  </div>
+</section>
+
+<!-- ================= PANDUAN ================= -->
+<section class="section" id="panduan">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Panduan</p>
+    <h2>Cara pakai Rav dari awal</h2>
+    <p>Pilih topik di bawah. Panduannya lengkap, dari pasang sampai personalisasi.</p>
+  </div>
+  <div class="guide-tabs reveal">
+    <button class="on" data-target="g-pasang">Pasang</button>
+    <button data-target="g-otomatis">Otomatis hidup</button>
+    <button data-target="g-personal">Personalisasi</button>
+    <button data-target="g-pintasan">Pintasan & tips</button>
+    <button data-target="g-hapus">Hapus</button>
+  </div>
+
+  <div class="guide-panel on reveal" id="g-pasang">
+    <div>
+      <h3>Pasang dan jalankan</h3>
+      <p>Installer akan memasang Rav seperti aplikasi Windows biasa, lengkap dengan shortcut di Desktop dan Start Menu.</p>
+      <ol class="ol" style="margin-top:22px">
+        <li>Klik <b>Unduh installer</b> di bagian Unduh di atas.<small>File: Rav-Setup-3.0.0.exe</small></li>
+        <li>Buka file yang sudah terunduh, lalu pilih folder instalasi jika ingin mengubahnya.</li>
+        <li>Jika muncul peringatan SmartScreen, pilih <span class="kbd">More info</span> lalu <span class="kbd">Run anyway</span>.</li>
+        <li>Selesai. Capsule akan muncul di bagian atas layar.</li>
+      </ol>
+    </div>
+    <div class="guide-visual">
+      <div class="gv-cap">🎵 Music · 🍅 Pomodoro · ⛅ 31°</div>
+      <div class="gv-lbl">Capsule tampil di tepi atas layar</div>
+    </div>
+  </div>
+
+  <div class="guide-panel reveal" id="g-otomatis">
+    <div>
+      <h3>Biar Rav otomatis hidup</h3>
+      <p>Supaya Rav langsung aktif setiap kali Windows menyala, aktifkan opsi autostart. Cukup dilakukan sekali.</p>
+      <ol class="ol" style="margin-top:22px">
+        <li>Lihat ikon Rav di <b>system tray</b> (pojok kanan bawah, di dekat jam). Kalau tidak terlihat, klik panah <span class="kbd">^</span> dulu.</li>
+        <li><b>Klik kanan</b> ikon Rav.</li>
+        <li>Centang <b>Jalan otomatis saat Windows start</b>.</li>
+      </ol>
+      <p style="margin-top:18px;font-size:14px">Untuk mematikannya, buka menu yang sama dan hilangkan centang. Untuk menutup Rav sepenuhnya, pilih <b>Keluar</b>.</p>
+    </div>
+    <div class="guide-visual">
+      <div class="gv-lbl">Menu klik kanan tray</div>
+      <div class="gv-menu" style="grid-template-columns:1fr;max-width:260px">
+        <span style="flex-direction:row;justify-content:flex-start;gap:10px"><i>⚙️</i>Personalisasi…</span>
+        <span style="flex-direction:row;justify-content:flex-start;gap:10px"><i>👁️</i>Tampilkan capsule</span>
+        <span class="on" style="flex-direction:row;justify-content:flex-start;gap:10px"><i>✓</i>Jalan otomatis saat Windows start</span>
+        <span style="flex-direction:row;justify-content:flex-start;gap:10px"><i>⏻</i>Keluar</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-panel reveal" id="g-personal">
+    <div>
+      <h3>Personalisasi</h3>
+      <p>Buka <b>Personalisasi</b> dari menu klik kanan tray. Semua perubahan langsung terlihat di layar, tanpa perlu restart.</p>
+      <ol class="ol" style="margin-top:22px">
+        <li><b>Karakter:</b> pilih satu dari 7 karakter. Klik kartunya untuk langsung menggantinya.</li>
+        <li><b>Bentuk:</b> Notch (menempel di atas layar) atau Pil (melayang sedikit di bawah).</li>
+        <li><b>Warna:</b> Hitam, Warna karakter, atau Garis neon.</li>
+        <li><b>Tampilan:</b> nyalakan atau matikan jam, format 24 jam, baterai, dan cuaca. Isi nama kota atau biarkan kosong untuk otomatis, lalu pilih °C atau °F.</li>
+        <li><b>Ambient light:</b> cahaya lembut di sekitar capsule. Atur intensitasnya dan pilih apakah ikut bereaksi terhadap animasi.</li>
+        <li><b>Animasi:</b> pilih animasi acak karakter (Jarang, Normal, atau Sering), serta animasi musik, volume, download, copy &amp; paste, dan baterai.</li>
+        <li><b>Mode game:</b> sembunyikan capsule saat main game, dan atur pengingat istirahat (30 menit sampai 2 jam).</li>
+      </ol>
+    </div>
+    <div class="guide-visual">
+      <div class="gv-lbl">Bentuk</div>
+      <div class="gv-colors"><span class="on">Notch</span><span>Pil</span></div>
+      <div class="gv-lbl" style="margin-top:8px">Warna</div>
+      <div class="gv-colors"><span class="on">Hitam</span><span>Warna karakter</span><span>Garis neon</span></div>
+      <div class="gv-lbl" style="margin-top:8px">Mode game</div>
+      <div class="gv-stat">Pengingat istirahat aktif · 60 menit</div>
+    </div>
+  </div>
+
+  <div class="guide-panel reveal" id="g-pintasan">
+    <div>
+      <h3>Pintasan dan tips</h3>
+      <p>Beberapa cara cepat supaya Rav terasa seperti bagian dari Windows.</p>
+      <ol class="ol" style="margin-top:22px">
+        <li><b>Buka capsule:</b> arahkan kursor ke bagian atas layar, atau klik ikon tray.</li>
+        <li><b>Ganti menu:</b> pakai tombol <span class="kbd">‹</span> dan <span class="kbd">›</span> di capsule, atau klik judul menu untuk melihat semua menu sekaligus.</li>
+        <li><b>Salin dan tempel:</b> Ctrl+C dan Ctrl+V akan tercatat di menu Clipboard.</li>
+        <li><b>Seret file:</b> tarik file ke capsule untuk menyimpannya di Shelf.</li>
+        <li><b>Mode fokus:</b> mulai Pomodoro sebelum bekerja, lalu biarkan capsule menemanimu.</li>
+      </ol>
+    </div>
+    <div class="guide-visual">
+      <div class="gv-lbl">Menu yang tersedia</div>
+      <div class="gv-menu">
+        <span class="on"><i>🎵</i>Music</span><span><i>🍅</i>Pomodoro</span><span><i>✅</i>To-do</span>
+        <span><i>⛅</i>Weather</span><span><i>📋</i>Clipboard</span><span><i>📥</i>Shelf</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-panel reveal" id="g-hapus">
+    <div>
+      <h3>Hapus atau lepas Rav</h3>
+      <p>Rav bisa dihapus seperti aplikasi Windows lainnya.</p>
+      <ol class="ol" style="margin-top:22px">
+        <li>Buka <b>Settings → Apps</b> (atau Installed apps di Windows 11).</li>
+        <li>Cari <b>Rav</b>, lalu pilih <b>Uninstall</b>.</li>
+        <li>Jika memakai versi portable, cukup hapus file dan folder yang berisi aplikasi.</li>
+      </ol>
+    </div>
+    <div class="guide-visual">
+      <div class="gv-stat off">Autostart dimatikan dari menu tray</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Tanya jawab</p>
+    <h2>Pertanyaan yang sering muncul</h2>
+  </div>
+  <div class="faq">
+    <details class="reveal"><summary>Apakah Rav gratis?</summary><p>Ya, Rav bisa diunduh dan dipakai secara gratis.</p></details>
+    <details class="reveal"><summary>Windows apa saja yang didukung?</summary><p>Windows 10 dan Windows 11 versi 64-bit.</p></details>
+    <details class="reveal"><summary>Apakah butuh internet?</summary><p>Fitur utama bekerja offline. Cuaca dan lirik lagu memerlukan koneksi internet.</p></details>
+    <details class="reveal"><summary>Mengapa capsule tidak muncul saat main game tertentu?</summary><p>Mode game bekerja untuk game borderless dan windowed fullscreen. Game dengan exclusive fullscreen kadang tetap menutupi capsule.</p></details>
+    <details class="reveal"><summary>Bagaimana cara mengganti karakter?</summary><p>Buka Personalisasi, lalu pilih salah satu dari 7 karakter. Perubahannya langsung terlihat di capsule.</p></details>
+    <details class="reveal"><summary>Di mana saya bisa melihat daftar pintasan menu?</summary><p>Klik judul menu di capsule untuk membuka daftar semua menu. Tombol ‹ dan › juga bisa dipakai untuk berpindah.</p></details>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= HUBUNGI KAMI ================= -->
+<section class="section" id="kontak">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Hubungi kami</p>
+    <h2>Ngobrol dengan Ravéon Official</h2>
+    <p>Pertanyaan, kerja sama, atau sekadar ingin menyapa? Pilih salah satu cara di bawah.</p>
+  </div>
+  <div class="kontak-grid">
+    <a class="kcard reveal" href="mailto:raveon.official.id@gmail.com" data-mail>
+      <span class="kico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></span>
+      <span class="ktx"><b>Email</b><small>raveon.official.id@gmail.com</small></span>
+    </a>
+    <a class="kcard reveal soc-link" href="https://www.tiktok.com/@raveon.official.id" target="_blank" rel="noopener"
+       data-app="snssdk1233://user/profile?uniqueId=raveon.official.id" data-web="https://www.tiktok.com/@raveon.official.id">
+      <span class="kico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3h-3.1v12.3a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.6a5.7 5.7 0 1 0 4.9 5.6V9a7.5 7.5 0 0 0 4.4 1.4V7.4A4.5 4.5 0 0 1 16.6 3z"/></svg></span>
+      <span class="ktx"><b>TikTok</b><small>@raveon.official.id</small></span>
+    </a>
+    <a class="kcard reveal soc-link" href="https://www.instagram.com/raveon.0fficial/" target="_blank" rel="noopener"
+       data-app="instagram://user?username=raveon.0fficial" data-web="https://www.instagram.com/raveon.0fficial/">
+      <span class="kico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+      <span class="ktx"><b>Instagram</b><small>@raveon.0fficial</small></span>
+    </a>
+    <a class="kcard reveal soc-link" href="https://www.threads.net/@raveon.0fficial" target="_blank" rel="noopener"
+       data-app="barcelona://user?username=raveon.0fficial" data-web="https://www.threads.net/@raveon.0fficial">
+      <span class="kico kico-th"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M17.5 11.5c-.4-3.4-2.6-5.3-5.8-5.3-3.3 0-5.5 2.1-5.5 5.3 0 3.2 2 5.3 5.4 5.3 2.6 0 4.1-1.3 4.3-3.2.2-1.5-.9-2.4-2.4-2.4-1.1 0-2 .4-2.2 1.2 1.3.4 2.5 1.2 2.4 2.7-.1 1.5-1.8 2.6-4.1 2.6M12 3c4.7 0 8.5 3.1 8.5 8.5"/></svg></span>
+      <span class="ktx"><b>Threads</b><small>@raveon.0fficial</small></span>
+    </a>
+  </div>
+</section>
+
+<dialog id="fbDialog" class="fb-dialog" aria-labelledby="fbTitle">
+  <div class="fb-dlg-in">
+    <div class="fb-dlg-head">
+      <div><p class="eyebrow">Kritik &amp; saran</p><h3 id="fbTitle">Masukanmu membantu Rav</h3></div>
+      <button type="button" class="fb-x" id="fbClose" aria-label="Tutup">×</button>
+    </div>
+    <p class="fb-lead">Tulis apa yang kurang, fitur yang kamu mau, atau bagian yang membingungkan. Masukan langsung dibaca oleh tim Ravéon Official.</p>
+    <form class="fb-form reveal" id="fbForm" novalidate>
+    <div class="fb-row">
+      <label class="fb-field"><span>Jenis masukan</span>
+        <select id="fbType">
+          <option value="Saran fitur">Saran fitur</option>
+          <option value="Kritik tampilan">Kritik tampilan</option>
+          <option value="Laporan bug">Laporan bug</option>
+          <option value="Kendala unduh / pasang">Kendala unduh / pasang</option>
+          <option value="Lainnya">Lainnya</option>
+        </select></label>
+      <label class="fb-field"><span>Nilai (opsional)</span>
+        <div class="fb-stars" id="fbStars" role="radiogroup" aria-label="Nilai">
+          <button type="button" data-v="1" aria-label="1 bintang">★</button><button type="button" data-v="2" aria-label="2 bintang">★</button><button type="button" data-v="3" aria-label="3 bintang">★</button><button type="button" data-v="4" aria-label="4 bintang">★</button><button type="button" data-v="5" aria-label="5 bintang">★</button>
+        </div></label>
+    </div>
+    <label class="fb-field"><span>Nama (opsional)</span><input type="text" id="fbName" maxlength="60" placeholder="Nama kamu"></label>
+    <label class="fb-field"><span>Masukan kamu</span><textarea id="fbMsg" rows="5" maxlength="1500" placeholder="Tulis kritik atau saranmu di sini…"></textarea></label>
+    <div class="fb-actions">
+      <button class="btn" type="submit">Kirim masukan</button>
+      <span class="fb-hint" id="fbHint">Masukan dikirim lewat email aplikasi kamu. Tidak perlu akun.</span>
+    </div>
+  </form>
+  </div>
+</dialog>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer2">
+  <div class="f2-top">
+    <div class="f2-brand">
+      <img src="assets/icon.png" alt="" width="40" height="40">
+      <div><b>Rav</b><span>Smart capsule untuk Windows</span></div>
+    </div>
+    <nav class="f2-links" aria-label="Tautan footer">
+      <a href="#fitur">Fitur</a><a href="#unduh">Unduh</a><a href="#panduan">Panduan</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a><button type="button" class="f2-btn" data-open-fb>Kritik &amp; saran</button>
+    </nav>
+    <div class="f2-soc">
+      <a class="soc-link" href="https://www.tiktok.com/@raveon.official.id" target="_blank" rel="noopener" data-app="snssdk1233://user/profile?uniqueId=raveon.official.id" data-web="https://www.tiktok.com/@raveon.official.id" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3h-3.1v12.3a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.6a5.7 5.7 0 1 0 4.9 5.6V9a7.5 7.5 0 0 0 4.4 1.4V7.4A4.5 4.5 0 0 1 16.6 3z"/></svg></a>
+      <a class="soc-link" href="https://www.instagram.com/raveon.0fficial/" target="_blank" rel="noopener" data-app="instagram://user?username=raveon.0fficial" data-web="https://www.instagram.com/raveon.0fficial/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a class="soc-link" href="https://www.threads.net/@raveon.0fficial" target="_blank" rel="noopener" data-app="barcelona://user?username=raveon.0fficial" data-web="https://www.threads.net/@raveon.0fficial" aria-label="Threads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M17.5 11.5c-.4-3.4-2.6-5.3-5.8-5.3-3.3 0-5.5 2.1-5.5 5.3 0 3.2 2 5.3 5.4 5.3 2.6 0 4.1-1.3 4.3-3.2.2-1.5-.9-2.4-2.4-2.4-1.1 0-2 .4-2.2 1.2 1.3.4 2.5 1.2 2.4 2.7-.1 1.5-1.8 2.6-4.1 2.6M12 3c4.7 0 8.5 3.1 8.5 8.5"/></svg></a>
+      <a href="mailto:raveon.official.id@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></a>
+    </div>
+  </div>
+  <div class="f2-bot">
+    <span>© 2026 Ravéon Official. Hak cipta dilindungi.</span>
+    <span class="f2-by">By Ravéon Official</span>
+  </div>
+</footer>
+
+
+
+<script src="hub.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
